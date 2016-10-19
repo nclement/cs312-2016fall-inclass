@@ -10,18 +10,20 @@ public class AverageTemps
 {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
-        
+
         double totalTemps = 0;
         System.out.print("How many days' temperatures? ");
 
         int numDays = console.nextInt();
         int[] temps = new int[numDays];
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
+        Arrays.sort(days);
+        
         System.out.println("Days is: " + Arrays.toString(days));
         String[] words = new String[10];
 
         System.out.println(temps[0]);
-        
+
         System.out.println(words.length);
         System.out.println(words[0]);
 
@@ -41,5 +43,11 @@ public class AverageTemps
             }
         }
         System.out.printf("%d days were above average.", numAbove);
+
+        System.out.println("temps is: " + Arrays.toString(temps));
+        Arrays.sort(temps);
+        System.out.println("temps is: " + Arrays.toString(temps));
+        System.out.println("The two lowest were: " + temps[0] + ", " + temps[1]);
+        System.out.println("The two highest were: " + temps[temps.length - 1] + ", " + temps[temps.length - 2]);
     }
 }

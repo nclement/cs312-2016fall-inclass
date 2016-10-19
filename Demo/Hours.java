@@ -14,8 +14,12 @@ public class Hours
         Scanner console = new Scanner(System.in);
         String searchName = console.next();
 
+        int x = 6;
+        doStuff(x);
+        System.out.println(x);
+        
         // Open my data file
-        Scanner file = new Scanner(new File("working_hours.txt"));
+        Scanner file = new Scanner(new File("working_hours.txt"));  
         //PrintStream output = new PrintStream(new File("summary.txt"));
         PrintStream output = new PrintStream(System.out);
         
@@ -42,6 +46,10 @@ public class Hours
         file.close();
     }
 
+    public static void doStuff(int x) {
+        x *= 3;
+    }
+    
     public static boolean matchesName(String line, String searchName) {
         return searchName.equals(extractUserName(line));
     }
