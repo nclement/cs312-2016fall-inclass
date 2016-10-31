@@ -1,0 +1,32 @@
+############################################################
+Quiz
+############################################################
+
+10 minutes
+
+############################################################
+Review
+############################################################
+
+Toolbox
+-Swap
+-Reverse
+-Count
+
+Immutability/Mutability (again)
+immutable (cannot change/mutate) - String, primitives, value
+mutable (can change) - Objects, Arrays, reference
+
+Arrays (again)
+
+Short Circuit Logic
+T or F or F or F or ... => T
+F and T and T and T and ... => F
+
+Null
+
+############################################################
+Bonus
+############################################################
+
+Review tomorrow night 7-9 p.m.

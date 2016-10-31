@@ -1,0 +1,48 @@
+================================================================================
+                                    Quiz
+================================================================================
+arrays
+
+================================================================================
+                            Pass by reference/value
+================================================================================
+primitives/objects
+    - primitives - int, float, char
+    - objects - String, Scanner, PhraseBank (user-defined)
+
+immutability/mutability
+
+Strings - objects, immutable
+primitives are immutable
+objects are mutable
+
+pass by reference - change inside, changes outside
+pass by value - change inside, doesnt matter
+
+array behaviors
+
+using arrays as counters
+
+useful methods
+    - int - ARRAY.length
+    - String - Array.toString(ARRAY)
+
+BONUS: multi dimensional arrays
+
+
+================================================================================
+                                Personality Test
+================================================================================
+The test has 10 groups of 7 questions with a repeating pattern in each group of 7 questions.
+
+The first question in each group is an Introvert/Extrovert questions
+(questions 1, 8, 15, 22, etc).
+
+The next two questions are for Sensing/iNtuition
+(questions 2, 3, 9, 10, 16, 17, 23, 24, etc).
+
+The next two questions are for Thinking/Feeling
+(questions 4, 5, 11, 12, 18, 19, 25, 26, etc).
+
+And the final two questions in each group are for Judging/Perceiving
+(questions 6, 7, 13, 14, 20, 21, 27, 28, etc).
