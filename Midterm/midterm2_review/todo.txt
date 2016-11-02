@@ -1,0 +1,46 @@
+==================================================================
+                                EXAM REVIEW
+==================================================================
+Everything Reference/Value/Object/Primitive/Immutable/Mutable
+    Primitive - int, char, long, float, ...
+    Objects - Scanner, Graphics, PhraseBank, Strings, Arrays
+    Immutable - pass by value, all primitives + String
+    Mutable - pass by reference, all Objects - String
+
+Arrays -
+    default values - null
+    memory addresses
+
+Java -
+    null
+    == - primitives
+    .equals - objects
+
+Toolbox -
+    O swap
+    O count
+    O reverse
+    O add things into array
+    O check sorted
+    O iterate backwards
+
+Tricky things -
+    length? length-1?
+
+Math -
+    D'Morgans
+    !(a || b) => !a && !b
+    !(a && b) => !a || !b
+    Short circuiting
+    || - a or b or c or d or ... or z
+    || stops when it hits the first true, and returns true
+    && - a and b and c and d and ... and z
+    && stops when it hits the first false, and returns false
+
+==================================================================
+                                TOUGH PROBLEMS
+==================================================================
+
+Remove all characters from "ABC", if the letter is in "A, D, E".
+
+{1, 2, 3, 4, 5}, {1, 3} => {2, 4, 5}

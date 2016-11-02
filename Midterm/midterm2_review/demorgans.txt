@@ -1,0 +1,30 @@
+D'Morgans
+!(a || b) => !a && !b
+!(a && b) => !a || !b
+
+Are the following two statements equivalent?
+A = !(xb <= yb && !p)
+B = xb > yb || p
+
+It looks like we have the following types -
+xb, yb numbers
+p, boolean
+
+A = !(xb <= yb && !p) How can we use DM?
+
+Well, we want to match this form -
+!(a && b) => !a || !b
+
+In our case,
+a = (xb <= yb)
+!a = xb > yb
+and
+b = !p
+!b = p
+so,
+(!a || !b) <=> (xb > yb) || p
+Now, we can use it.
+
+A = !(xb <= yb && !p)
+  = xb > yb || p
+B = xb > yb || p
