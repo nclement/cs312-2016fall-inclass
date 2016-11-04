@@ -34,8 +34,8 @@ void drawCells() {
       int neighbors = getNumNeighbors(i, j);
       // lerpColor takes two colors and a value from 0-1 representing
       // how much of each color it should add.
-      color from = color(204, 102, 0);
-      color to = color(0, 102, 153);
+      color from = color(255, 20, 0);
+      color to = color(0, 100, 255);
       fill(lerpColor(from, to, neighbors/8.0));
       if (cells[i][j]) {
         //rect(i * sizeOfBox, j * sizeOfBox, sizeOfBox, sizeOfBox);
@@ -50,10 +50,8 @@ int getNumNeighbors(int x, int y) {
   int neighbors = 0;
   for (int i = x - 1; i <= x + 1; i++) {
     for (int j = y - 1; j <= y + 1; j++) {
-      if (i > 0 && j > 0 && i < cells.length && j < cells.length) { 
-        if (cells[i][j]) {
-          neighbors++;
-        }
+      if (cells[i][j]) {
+        neighbors++;
       }
     }
   }
