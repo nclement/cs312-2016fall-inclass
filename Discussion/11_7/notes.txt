@@ -1,0 +1,19 @@
+================================================================================
+                                    Notes
+================================================================================
+2D Arrays
+    - how to iterate
+
+More Counting
+    - letters
+
+Classes/Objects
+    - Abstraction
+
+Static vs Nonstatic
+    - static methods
+    - instance methods
+
+Class vs Instance
+    - static methods
+    - instance methods
