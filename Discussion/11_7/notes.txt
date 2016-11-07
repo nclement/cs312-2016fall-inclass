@@ -1,6 +1,6 @@
-================================================================================
-                                    Notes
-================================================================================
+==========================================================
+                        Notes
+==========================================================
 2D Arrays
     - how to iterate
 
@@ -11,9 +11,5 @@ Classes/Objects
     - Abstraction
 
 Static vs Nonstatic
-    - static methods
-    - instance methods
-
-Class vs Instance
-    - static methods
-    - instance methods
+    - static methods (class methods, relevant to all of the class)
+    - instance methods (belongs to a certain instance)
