@@ -1,10 +1,8 @@
 void setup() {
   size(400, 400);
-  Point p1 = new Point();
-  Point p2 = new Point();
+  Point p1 = new Point(200, 50);
+  Point p2 = new Point(23, 100);
   
-  p1.x = 50;
-  p1.y = 100;
   p1.size = 20;
   p1.c = color(255, 255, 255);
   
