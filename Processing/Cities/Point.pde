@@ -1,12 +1,8 @@
 public class Point {
   private int x;  // The point's x-coord
   private int y;  // The point's y-coord
-  int size;
-  color c;
-  
-  double distanceTo711;
-  String nameOfFavoriteTVShow;
-  boolean didIVoteCorrectly = false;
+  private int size;
+  private color c;
   
   /*
   public Point() {
@@ -16,7 +12,7 @@ public class Point {
   */
   
   public Point(int px, int py) {
-    System.out.println("Other Point has been created with " + px + ", " + py);
+    //System.out.println("Other Point has been created with " + px + ", " + py);
     setPoint(px, py);
   }
   
@@ -30,7 +26,23 @@ public class Point {
      x = px;
      y = py;
   }
+  
+  public void setColor(color col) {
+    c = col; 
+  }
+  
+  public void setSize(int s) {
+    size = s; 
+  }
+  public int getSize() {
+    return size; 
+  }
+  
   public void translatePoint(int dx, int dy) {
     this.setPoint(x + dx, y + dy);
+  }
+  
+  public double distance(Point p) {
+    return sqrt(pow(x - p.x, 2.0) + pow(y - p.y, 2.0));
   }
 }
