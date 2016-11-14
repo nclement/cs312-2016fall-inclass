@@ -25,7 +25,7 @@ void setup() {
   // a random heght, size, and color.
   for (int i = 0; i < numCities; i++) {
     // Use the Point constructor with a position.
-    cities[i] = new Point((int)random(width), (int)random(height));
+    cities[i] = new Point(this, (int)random(width), (int)random(height));
     cities[i].setSize((int)random(5, 20));
     cities[i].setColor(color(random(255), random(255), random(255)));
   }
@@ -41,7 +41,7 @@ void draw() {
 
   // Get the point that the mouse is at. The pink variables are
   // already set for you in Processing.
-  Point mousePoint = new Point(mouseX, mouseY);
+  Point mousePoint = new Point(this, mouseX, mouseY);
 
   // Loop over each city, randomly moving it, and setting its color
   // if it's close to the mouse.
@@ -66,17 +66,26 @@ void draw() {
 // If the mouse is clicked, "destroy" all cities that are within
 // the "dangerZone" (just move them someplace else).
 void mousePressed() {
-  Point mousePoint = new Point(mouseX, mouseY);
+  Point mousePoint = new Point(this, mouseX, mouseY);
 
   for (int i = 0; i < numCities; i++) {
     if (cities[i].distance(mousePoint) < dangerZone) {
       // Need to get the size so we can use it later.
       int prevSize = cities[i].getSize();
       // If it's hit, move it to a new random location.
-      cities[i] = new Point((int)random(width), (int)random(height));
+      cities[i] = new Point(this, (int)random(width), (int)random(height));
       // Set the size to the former size or it will have size 0
       // and not show up.
       cities[i].setSize(prevSize);
+    }
+  }
+}
+
+
+void keyPressed() {
+  if (key == ENTER) {
+    for (int i = 0; i < numCities; i++) {
+      System.out.println("Mine: " + cities[i].getID() + " vs global: " + Point.globalID); 
     }
   }
 }
