@@ -1,0 +1,18 @@
+=================================================
+                    Review
+=================================================
+
+Static/Nonstatic methods/variables
+    nonstatic - each instance has its own properties
+    static - applies to all of the class, pertains to helper methods
+
+Private variables
+
+Instance vs Class
+    class - blueprint, cookie cutter shape
+    instance - cookie, calling new on a class
+
+"This"
+
+Connect-4 Tips
+    diagonals - see if you can win starting from a single point
