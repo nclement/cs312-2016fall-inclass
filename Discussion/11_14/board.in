@@ -1,0 +1,30 @@
+6
+...#..
+.#..#.
+..#...
+...#..
+....#.
+......
+
+how do we know if we have a streak going diagonally down,
+starting at a point i, j
+i+0,j+0 is a hash
+i+1,j+1 is a hash
+i+2,j+2 is a hash
+i+3,j+3 is a hash
+
+k 0 to 3 inclusive
+i+k,j+k is not a hash OR out of bounds, return false
+return true
+
+i/j 0   1   2
+0   .   .   .
+1   .   .   .
+2   .   .   .
+
+i refers to the row, j refers to the col
+i,j
+i+1,j => moves down one row
+i-1,j => moves up one row
+i,j+1 => moves right one col
+i,j-1 => moves left one col
