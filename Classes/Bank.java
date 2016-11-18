@@ -23,7 +23,7 @@ public class Bank
         System.out.println("Nate Dogg should have $86.60: " + nate_dogg.getCurrentAmount());
        
         // I want to merge my "slush" account with my regular so I can buy groceries.
-        nate_dogg.merge(nd_pro);
+        nate_dogg.merge(nat_pro);
         System.out.println("Nate Dogg should have $586.60: " + nate_dogg.getCurrentAmount());
         System.out.println("Nate Dogg's slush account should have $0.00: " + nat_pro.getCurrentAmount());
     }
