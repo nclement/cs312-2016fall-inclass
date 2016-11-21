@@ -1,0 +1,24 @@
+=================================================
+                    Review
+=================================================
+
+Private variables (briefly).
+- Abstraction (hide the details)
+
+Multiple constructors.
+- Method signatures must be UNIQUE (different params)
+- The number of parameters can be the same
+    - public Foo (int, String, int)
+    - public Foo (int, String, float)
+  But the types then have to be different.
+
+Write a class.
+- Square
+    - Unit constructor
+    - Length constructor
+    - Merging squares
+    - To string
+
+Quiz - UNTIL 14:37
+
+TODO: Enums (once i look up the syntax)
