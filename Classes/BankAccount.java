@@ -7,16 +7,20 @@
  */
 public class BankAccount
 {
+    public enum AccountType
+    {
+        EXECUTIVE, TRADITIONAL, STUDENT
+    }
+
     // Needs: name, balance, interest rate, unique ID, account type
     private String myName;
     private double myBalance;
     private double myInterestRate;
     private int myUID;
     private AccountType myType;
-    
+
     private static int globalUID = 0;
-    
-    
+
     // Create a constructor
     public BankAccount(String name, double balance, double ir, AccountType type) {
         // Look at the local copy of myName (passed in the constructor) and assign 
@@ -25,11 +29,11 @@ public class BankAccount
         myBalance = balance;
         myInterestRate = ir;
         myType = type;
-        
+
         myUID = globalUID;
         globalUID++;
     }
-    
+
     /**
      * Merges two accounts
      * 
@@ -47,5 +51,20 @@ public class BankAccount
         if (this.myType != secondary.myType) {
             return false;
         }
+
+        // Set both interest rates to the lowest
+        if (this.myInterestRate > secondary.myInterestRate) {
+            // Updated mine because it's highest.
+            this.myInterestRate = secondary.myInterestRate;
+        } else {
+            secondary.myInterestRate = this.myInterestRate;            
+        }
+
+        // Update the balance
+        this.myBalance += secondary.myBalance;
+        // Set the balance in the secondary account to zero.
+        secondary.myBalance = 0;
+        
+        return true;
     }
 }

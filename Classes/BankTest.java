@@ -8,8 +8,8 @@
 public class BankTest
 {
     public static void main(String[] args) {
-        AccountType t = AccountType.EXECUTIVE;
-        if (t == AccountType.STUDENT) {
+        BankAccount.AccountType t = BankAccount.AccountType.EXECUTIVE;
+        if (t == BankAccount.AccountType.STUDENT) {
             System.out.println("It's a student!");
         } else {
             System.out.println("Nope");
