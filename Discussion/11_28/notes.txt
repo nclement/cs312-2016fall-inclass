@@ -1,0 +1,15 @@
+=================================================
+                    Review
+=================================================
+
+Enumerations
+    - Programmer sanity
+    - Debugging
+
+Inheritance
+    - Can only have 1 parent (language specific).
+    - @Override keyword (not required).
+    - super keyword.
+    - Write a pets class.
+
+Quiz
