@@ -16,5 +16,5 @@ public class Employee {
 
     public String getVacationForm() {
         return "yellow is the color of honey"; // use the yellow form
-    } 
+    }
 }
