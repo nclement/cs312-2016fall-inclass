@@ -22,7 +22,6 @@ public class LawFirm
         for (int i = 0; i < numEmployees; i++) {
             System.out.println(emps[i]);
             System.out.println("vacation: " + emps[i].getVacationForm());
-            emps[i].takeDictation("Hello, secretary");
         }
         //System.out.println("Employee vacation: " + emp.getVacationForm());
         //System.out.println("Secretary vacation: " + sec.getVacationForm());
@@ -32,5 +31,10 @@ public class LawFirm
         
         //Lawyer law = new Lawyer();
         //System.out.println("Lawyer vacation days: " + law.getVacationDays());
+        
+        Lawyer e1   = new Lawyer("Jack Brown", "Boss");
+        Employee e2 = new Employee("Jack Brown");
+        System.out.println("Same?       " + (e1.equals(e2)));
+        System.out.println("Still same? " + (e2.equals(e1)));
     }
 }

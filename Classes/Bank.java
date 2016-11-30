@@ -9,19 +9,25 @@
 public class Bank
 {
     public static void main(String[] args) {
-        BankAccount drumpf = new BankAccount("Drumpf", EXECUTIVE, 10_000_000, 0.03);
-        BankAccount nate_dogg = new BankAccount("Nathan Clement", STUDENT, 36.60, 0.01);
-        BankAccount nat_pro = new BankAccount("Nate Cleme", STUDENT, 500, 0.03);
-        BankAccount deptChair = new BankAccount("Bruce Porter", TRADITIONAL, 247_498, 0.02);
-        
+        BankAccount drumpf = new BankAccount("Drumpf", 10_000_000, 0.03, BankAccount.AccountType.EXECUTIVE);
+        BankAccount nate_dogg = new BankAccount("Nathan Clement", 36.60, 0.01, BankAccount.AccountType.STUDENT);
+        BankAccount nat_pro = new BankAccount("Nate Cleme", 500, 0.03, BankAccount.AccountType.STUDENT);
+        BankAccount deptChair = new BankAccount("Bruce Porter", 247_498, 0.02, BankAccount.AccountType.TRADITIONAL);
+
         // Trump got $100,000 for winning the election
         drumpf.deposit(100_000);
         // I got a $50 raise (per semester) for teaching this class
         nate_dogg.deposit(50);
-        // I tried to pull out $10M
-        nate_dogg.widthdraw(10_000_000);
+        try {
+            // I tried to pull out $10M
+            nate_dogg.withdraw(10_000_000);
+            System.out.println("ERROR!!! Should not reach this line!!!");
+        }
+        catch(IllegalStateException e) {
+            System.out.println("Correctly caught exception with message: " + e.getMessage());
+        }
         System.out.println("Nate Dogg should have $86.60: " + nate_dogg.getCurrentAmount());
-       
+
         // I want to merge my "slush" account with my regular so I can buy groceries.
         nate_dogg.merge(nat_pro);
         System.out.println("Nate Dogg should have $586.60: " + nate_dogg.getCurrentAmount());

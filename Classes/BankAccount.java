@@ -67,4 +67,30 @@ public class BankAccount
         
         return true;
     }
+    
+    public double getCurrentAmount() {
+        return myBalance;
+    }
+    
+    /**
+     * Deposits the given amount into the bank account.
+     */
+    public void deposit(double amount) {
+        myBalance += amount;
+    }
+    
+    /**
+     * Withdraw the specified amount; if there is not enough money
+     * in the bank, will throw an IllegalStateException.
+     * 
+     * Returns the amount left in the account.
+     */
+    public double withdraw(double amount) {
+        if (amount > myBalance) {
+            throw new IllegalStateException("Not enough money in the account");
+        }
+        
+        myBalance -= amount;
+        return myBalance;
+    }
 }

@@ -12,6 +12,10 @@ public class Point {
     String nameOfFavoriteTVShow;
     boolean didIVoteCorrectly;
 
+    public Point(int xPos, int yPos) {
+        setCoords(xPos, yPos);
+    }
+    
     public void setCoords(int xPos, int yPos) {
         x = xPos;
         y = yPos;
@@ -29,7 +33,7 @@ public class Point {
         g.fillOval(x, y, size, size);
     }
     
-    public static setCloseness(double d) {
+    public static void setCloseness(double d) {
         tooClose = d;
     }
     
@@ -41,4 +45,30 @@ public class Point {
     public static boolean samePoint(Point p1, Point p2) {
         return getDistance(p1, p2) < tooClose;
     }
+    
+    public boolean equals(Point po) {
+        if (x == po.x && y == po.y) {
+            return true;
+        }
+        return false;
+        /*
+        System.out.println("Checking here for equals of " + obj);
+        if (obj instanceof Point) {
+            Point po = (Point)obj;
+            if (x == po.x && y == po.y) {
+                return true;
+            }
+        }
+        return false;
+        */
+    }
+    
+    /*
+    public boolean equals(Object obj) {
+        System.out.println("Checking for equals of " + obj);
+        return this == obj;
+    }
+    */
 }
+
+
