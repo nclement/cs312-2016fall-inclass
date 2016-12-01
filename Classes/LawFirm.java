@@ -32,7 +32,7 @@ public class LawFirm
         //Lawyer law = new Lawyer();
         //System.out.println("Lawyer vacation days: " + law.getVacationDays());
         
-        Lawyer e1   = new Lawyer("Jack Brown", "Boss");
+        Employee e1 = new Lawyer("Jack Brown", "Boss");
         Employee e2 = new Employee("Jack Brown");
         System.out.println("Same?       " + (e1.equals(e2)));
         System.out.println("Still same? " + (e2.equals(e1)));

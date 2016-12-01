@@ -23,8 +23,17 @@ public class Lawyer extends Employee
         return super.getSalary() + 10_000; // gets 10k more than employee
     }
 
-    public boolean equals(Object obj) {
-        System.out.println(obj);
+    public boolean blindlyEquals(Employee o) {
+        if (o instanceof Lawyer) {
+            // Cast o to be a Lawyer
+            Lawyer l = (Lawyer)o;
+            return super.equals(o) && myTitle.equals(l.myTitle);
+        }
+        
+        return false;
+    }
+
+    public boolean equals(Lawyer obj) {
         if (obj instanceof Lawyer) {
             Lawyer e = (Lawyer)obj;
             if (getName().equals(e.getName()) && myTitle.equals(e.myTitle)) {

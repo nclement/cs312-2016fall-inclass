@@ -31,12 +31,14 @@ public class Employee {
         return "yellow is the color of honey"; // use the yellow form
     }
     
-    public boolean equals(Object obj) {
+    public boolean blindlyEquals(Employee e) {
+        return myName.equals(e.myName);
+    }
+    
+    public boolean equals(Employee obj) {
         if (obj instanceof Employee) {
             Employee e = (Employee)obj;
-            if (myName.equals(e.myName)) {
-                return true;
-            }
+            return this.blindlyEquals(e) && e.blindlyEquals(this);
         }
         return false;
     }
