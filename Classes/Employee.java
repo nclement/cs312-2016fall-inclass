@@ -35,7 +35,7 @@ public class Employee {
         return myName.equals(e.myName);
     }
     
-    public boolean equals(Employee obj) {
+    public boolean equals(Object obj) {
         if (obj instanceof Employee) {
             Employee e = (Employee)obj;
             return this.blindlyEquals(e) && e.blindlyEquals(this);
