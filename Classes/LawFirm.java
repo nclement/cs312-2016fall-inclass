@@ -8,6 +8,17 @@
 public class LawFirm
 {
     public static void main(String[] args) {
+        Employee f = new Employee("Nathan");
+        Secretary s = new Secretary();
+        Lawyer l = new Lawyer("Nathan", "Agent");
+        Employee ls = new LegalSecretary();
+        //Secretary l2 = new Lawyer("Nathen", "Agant");
+        //LegalSecretary l3 = new Employee();
+
+        //Employee ee = new Object();
+        Object o = new Employee();
+        
+        /*
         int numEmployees = 5;
         Employee emps[] = new Employee[numEmployees];
         // what is emps[2]?
@@ -36,5 +47,6 @@ public class LawFirm
         Employee e2 = new Employee("Jack Brown");
         System.out.println("Same?       " + (e1.equals(e2)));
         System.out.println("Still same? " + (e2.equals(e1)));
+        */
     }
 }

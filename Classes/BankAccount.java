@@ -14,6 +14,7 @@ public class BankAccount
 
     // Needs: name, balance, interest rate, unique ID, account type
     private String myName;
+    // I want to make sure this balance is *always* positive
     private double myBalance;
     private double myInterestRate;
     private int myUID;
@@ -64,33 +65,34 @@ public class BankAccount
         this.myBalance += secondary.myBalance;
         // Set the balance in the secondary account to zero.
         secondary.myBalance = 0;
-        
+
         return true;
     }
-    
+
     public double getCurrentAmount() {
         return myBalance;
     }
-    
+
     /**
      * Deposits the given amount into the bank account.
      */
     public void deposit(double amount) {
         myBalance += amount;
     }
-    
+
     /**
-     * Withdraw the specified amount; if there is not enough money
-     * in the bank, will throw an IllegalStateException.
+     * Withdraw the specified amount; returns the new amount.
      * 
-     * Returns the amount left in the account.
+     * If there's not enough money in the account, throw an 
+     * IllegalStateException
      */
     public double withdraw(double amount) {
-        if (amount > myBalance) {
-            throw new IllegalStateException("Not enough money in the account");
+        if (myBalance < amount) {
+            throw new IllegalStateException("Account balance too small!");
         }
         
         myBalance -= amount;
         return myBalance;
     }
+
 }

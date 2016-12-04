@@ -11,6 +11,10 @@ public class Employee {
         myName = name;
     }
     
+    public void setName(String name) {
+        myName = name;
+    }
+    
     public int getHours() {
         return 40; // works 40 hours / week 
     }
