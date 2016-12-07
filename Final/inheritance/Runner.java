@@ -10,7 +10,7 @@ public class Runner {
         // list.get(2);
 
         // valid. equivalent to list.add("asdf");
-        list.add(6, "asdf");
+        list.add(2, "asdf");
     }
 
     public static void addStars(ArrayList<String> list) {

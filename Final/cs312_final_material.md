@@ -67,7 +67,7 @@ public class EmptyRunner {
 You don't, it's just for clarity.
 
 One place we would HAVE to use it is the following, but if we just name the
-constructor constructor something else, we have no problem.
+"name" parameters something else (like theName), we have no problem.
 
 ```java
 public class Student {
